@@ -1,0 +1,31 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Java / Maven
+target/
+*.class
+
+# Logs
+*.log
+
+# Dev / Personal
+.dev/
+
+# Secrets / local config
+.env
+.env.*
+local.settings.json
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# Azure local state
+.azure/
+
+# Antigravity temporary artifacts
+.agents/cache/
+.agents/tmp/
+.agents/logs/
