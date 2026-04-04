@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+azure:
+  storage:
+    connection-string: ${AZURE_STORAGE_CONNECTION_STRING:}
+    queue:
+      name: ${AZURE_STORAGE_QUEUE_NAME:tickets}
+    table:
+      name: ${AZURE_STORAGE_TABLE_NAME:ticketresults}
+
+spring:
+  application:
+    name: ticketapi
