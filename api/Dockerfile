@@ -1,4 +1,4 @@
-FROM eclipse-temurin:24-jdk AS build
+FROM eclipse-temurin:21-jdk AS build
 WORKDIR /workspace/app
 
 # Copy maven executable to the image
@@ -16,7 +16,7 @@ COPY src src
 RUN ./mvnw package -DskipTests
 
 # Run stage
-FROM eclipse-temurin:24-jre
+FROM eclipse-temurin:21-jre
 VOLUME /tmp
 WORKDIR /app
 COPY --from=build /workspace/app/target/*.jar app.jar
