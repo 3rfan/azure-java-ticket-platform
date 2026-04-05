@@ -18,7 +18,6 @@ RUN ./mvnw package -DskipTests
 
 # Run stage
 FROM eclipse-temurin:21-jre
-VOLUME /tmp
 WORKDIR /app
 COPY --from=build /workspace/app/target/*.jar app.jar
 
