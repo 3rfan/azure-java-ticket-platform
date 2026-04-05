@@ -27,7 +27,7 @@ public class TableStorageService {
                     .tableName(tableName)
                     .buildClient();
             try {
-                this.tableClient.createTableIfNotExists();
+                this.tableClient.createTable();
             } catch (Exception e) {
                 log.warn("Could not create table. This might be normal in local dev without Azurite: {}", e.getMessage());
             }

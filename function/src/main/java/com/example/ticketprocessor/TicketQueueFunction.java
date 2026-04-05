@@ -57,7 +57,11 @@ public class TicketQueueFunction {
                         .tableName(tableName)
                         .buildClient();
                         
-                tableClient.createTableIfNotExists();
+                try {
+                    tableClient.createTable();
+                } catch (Exception e) {
+                    // Ignore if already exists
+                }
 
                 TableEntity entity = new TableEntity("tickets", ticketId)
                         .addProperty("status", "processed")
