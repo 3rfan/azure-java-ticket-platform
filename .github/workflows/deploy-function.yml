@@ -1,0 +1,40 @@
+name: Deploy Function to Azure
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'function/**'
+      - '.github/workflows/deploy-function.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'microsoft'
+          cache: 'maven'
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Build and Package Function
+        run: mvn clean package azure-functions:package -DskipTests
+        working-directory: function
+
+      - name: Deploy Function to Azure
+        uses: Azure/functions-action@v1
+        with:
+          app-name: func-nebius-java-demo-worker-dev
+          package: function/target/azure-functions/func-nebius-java-demo-worker-dev
+          respect-funcignore: true
