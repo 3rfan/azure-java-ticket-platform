@@ -28,3 +28,4 @@ jobs:
           resourceGroupName: ${{ secrets.AZURE_RESOURCE_GROUP }}
           template: ./infra/main.bicep
           parameters: location=germanywestcentral environmentName=dev
+          failOnStdErr: false
