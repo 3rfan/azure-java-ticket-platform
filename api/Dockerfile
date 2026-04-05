@@ -7,6 +7,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 
 # Build all dependencies
+RUN chmod +x ./mvnw
 RUN ./mvnw dependency:go-offline -B -DskipTests
 
 # Copy the project source
