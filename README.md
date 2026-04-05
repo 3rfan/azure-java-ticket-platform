@@ -1,5 +1,7 @@
 # Azure Java Ticket Platform
 
+![Azure Architecture Diagram](docs/AzureExportedTemplate.png)
+
 ## Project Overview
 This represents an asynchronous cloud-native ticket ingestion platform built in Java 21 on Microsoft Azure.
 
