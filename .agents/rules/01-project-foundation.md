@@ -1,8 +1,10 @@
+---
+trigger: always_on
+---
+
 ## Project: Azure Java Ticket Platform for Nebius Cloud Engineer Internship
 
 This document is the single source of truth for AI agents helping build this project.
-
-The goal is to produce a recruiter-ready GitHub portfolio project that strongly matches the Nebius Cloud Engineer Early Talent internship in Amsterdam.
 
 The project must demonstrate:
 - Microsoft Azure usage
@@ -35,21 +37,6 @@ This project demonstrates a real cloud integration pattern:
 - expose status later through an API
 - deploy repeatably using IaC
 - observe system behavior through monitoring
-
-This is intentionally designed to look like a junior cloud engineering project rather than a generic CRUD web app.
-
-### Why this project fits the internship
-This project maps well to the role because it demonstrates:
-- Azure compute
-- storage services
-- API-based integration
-- Infrastructure as Code with Bicep
-- GitHub Actions CI/CD
-- containerization
-- basic security and secrets handling
-- Azure monitoring/logging
-- cleanup and cost awareness
-- practical documentation
 
 ---
 ## 2. Ground Rules for AI Agents
@@ -154,7 +141,7 @@ Do not:
 ## 4. Tech Stack
 
 ### Required stack
-- Java 24
+- Java 21
 - Spring Boot 3.x
 - Maven
 - Docker

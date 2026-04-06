@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 ## 8. AI Agent Build Order
 
 AI agents should follow this exact order unless there is a strong reason not to.
@@ -411,9 +415,9 @@ Use at least:
 ---
 ## 18. Quality Bar for “Done”
 
-The project is “done enough” for internship applications when all of the following are true:
+The project is “done enough” when all of the following are true:
 
-1. GitHub repo is public and clean
+1. GitHub repo is clean
 2. README explains the project clearly
 3. Spring Boot API works in Azure Container Apps
 4. Java Function processes queue messages
@@ -424,21 +428,5 @@ The project is “done enough” for internship applications when all of the fol
 9. GitHub Actions workflow files exist
 10. monitoring screenshots are present
 11. cleanup script exists
-12. repo looks intentional and polished
-
----
-## 19. Suggested Commit Sequence
-
-Use a clean commit history similar to:
-1. `chore: initialize repo structure`
-2. `feat: add spring boot health endpoint and ticket api skeleton`
-3. `feat: integrate azure queue storage for ticket submission`
-4. `feat: add table storage lookup endpoint`
-5. `feat: containerize spring boot api`
-6. `feat: add java azure function for queue processing`
-7. `docs: add architecture and troubleshooting guides`
-8. `infra: add bicep templates for azure resources`
-9. `ci: add github actions deployment workflows`
-10. `docs: finalize readme screenshots and cleanup instructions`
 
 ---
