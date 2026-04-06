@@ -3,9 +3,9 @@
 ![Azure Architecture Diagram](docs/AzureExportedTemplate.png)
 
 ## Project Overview
-This represents an asynchronous cloud-native ticket ingestion platform built in Java 21 on Microsoft Azure.
+An asynchronous cloud-native ticket ingestion platform built in Java 21 on Microsoft Azure.
 
-Built around **Spring Boot**, **Azure Functions**, **Azure Queue Storage** and **Azure Container Apps**, this decouples frontend ingestion layers from background backend processing.
+Built with **Spring Boot**, **Azure Functions**, **Azure Queue Storage** and **Azure Container Apps**.
 
 ## Problem Statement
 Standard CRUD applications process events synchronously. During extreme traffic spikes, direct database operations will crash the web server. This platform resolves this by using Queues.
